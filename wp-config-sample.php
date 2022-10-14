@@ -48,7 +48,32 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'put your unique phrase here' );
+
+/*
+About Wordpress Salts
+---------------------
+
+ WordPress salts or secret keys are random strings of code containing eight variables that encrypt your login details.
+
+They’re added to your password to secure your WordPress login credentials further. This ensures your passwords are immune to brute-force attacks 
+and similar hacking methods.
+
+When logging into the Dashboard, a number of browser cookies containing WordPress login information –  namely, 
+wordpress_[hash] and wordpress_logged_in_[hash] – are created and stored inside your computer. 
+This means that if a hacker can access your web browser’s cookies, they can extract your passwords.
+
+Fortunately, with security keys and salts, all your login details are hashed, 
+meaning that they are encrypted using a sequence of random strings. These strings are visible while the actual password isn’t.
+
+Every time you input sensitive data on WordPress, such as your username or email address and password, 
+salts will regenerate the plain text used as your password into a randomly encrypted text.
+
+For example, if your password is “yourpassword”, using WordPress salts, 
+it will be stored as random characters like “SG^&%@KD>>:_+$#%HBJH**6#jkj”. 
+Attackers will not be able to decipher your actual password even if they gain access to your site’s code.
+
+ */
+define( 'AUTH_KEY',         'put your unique phrase here' ); 
 define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
 define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
 define( 'NONCE_KEY',        'put your unique phrase here' );
