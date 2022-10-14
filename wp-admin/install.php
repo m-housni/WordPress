@@ -7,7 +7,8 @@
  */
 
 // Sanity check.
-if ( false ) {
+// TODO: check this unreachable block
+if ( false ) { // TODO: unreachable code to check
 	?>
 <!DOCTYPE html>
 <html>
@@ -36,7 +37,7 @@ define( 'WP_INSTALLING', true );
 require_once dirname( __DIR__ ) . '/wp-load.php';
 
 /** Load WordPress Administration Upgrade API */
-require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+require_once ABSPATH . 'wp-admin/includes/upgrade.php'; 
 
 /** Load WordPress Translation Install API */
 require_once ABSPATH . 'wp-admin/includes/translation-install.php';
